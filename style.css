@@ -18,6 +18,11 @@ body {
     display: flex;
     justify-content: space-between;
     padding: 25px 10%;
+    z-index: 100;
+    background: linear-gradient(250.59deg, #322c38 0%, #514e61,28.53%,#1c2137 75.52%);
+}
+.sticky {
+    border-bottom: 2px solid rgba(255, 255, 255, .2);
 }
 .header .logo {
     text-decoration: none;
@@ -43,12 +48,27 @@ section {
     align-items: center;
     height: 100vh;
     padding: 10rem 9% 2rem;
+    overflow: hidden;
 }
 .home {
     justify-content: center;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    /* background: linear-gradient(250.59deg, #322c38 0%, #514e61,28.53%,#1c2137 75.52%); */
 }
 .home img{
     height: 500px;
+    transition: .5s ease;
+    opacity: 1;
+}
+.home img.active {
+    transform: rotate(45deg) translate(500px);
+    transition: .5s ease;
+    opacity: 0;
+}
+.about {
+    justify-content: center; 
 }
 .container {
     height: 70vh;
@@ -60,6 +80,7 @@ section {
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    overflow: hidden;
 }
 .container .circle {
     height: 300px;
@@ -73,28 +94,91 @@ section {
 .circle img {
     height: 200px;
     width: 200px;
+    transition: .7s ease;
+    transform-origin: top center;
+    scale: 0;
+}
+section.start-animation .circle img {
+    scale: 1;
 }
 .text-content .heading {
     font-size: 45px;
     font-weight: 500;
+    transform: translateX(-360px);
 }
-.text-content h5 {
+section.start-animation .text-content1 .heading{
+    animation: LeftSlide 1s ease forwards;
+}
+@keyframes LeftSlide {
+    0% {
+        transform: translateX(-360px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.text-content1 h5 {
     font-size: 18px;
     font-weight: 500;
     margin: 10px 0;
+    transform: translateX(-360px);
+}
+section.start-animation .text-content1 h5{
+    animation: LeftSlide 1s ease forwards;
+    animation-delay: .5s;
 }
 .text-content p {
-    max-width: 250px;
+    max-width: 350px;
     font-size: 13px;
+    /* transform: translateX(-360px); */
+}
+.text-content1 p {
+    transform: translateX(-361px);
+}
+section.start-animation .text-content1 p{
+    animation: LeftSlide 1s ease forwards;
+    animation-delay: 1s;
 }
 .text-content .btn2 {
     margin: 10px 0;
     background: #1c2137;
+    transform: translateX(-360px);
+    transition: .5s;
+}
+.text-content .btn2:hover {
+    scale: 1.05;
+}
+section.start-animation .text-content1 .btn2{
+    animation: LeftSlide 1s ease forwards;
+    animation-delay: 1.5s;
 }
 .text-content2 p{
     margin: 10px 0;
     font-size: 15px;
     font-weight: 500;
+    transform: translateX(382px);
+}
+section.start-animation .text-content2 p{
+    animation: RightSlide 1s ease forwards;
+    animation-delay: 1.9s;
+}
+section.start-animation .text-content2 p:nth-child(2){
+    animation-delay: 2.3s;
+}
+section.start-animation .text-content2 p:nth-child(3){
+    animation-delay: 2.7s;
+}
+@keyframes RightSlide {
+    0% {
+        transform: translateX(360px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
 }
 .text-content2 span {
     font-size: 13px;
@@ -122,6 +206,41 @@ section {
 }
 .news-item {
     text-align: center;
+    opacity: 0;
+    scale: 0;
+}
+section.start-animation .newsbox1 .news-item:nth-child(1){
+    animation: Visibility 1s ease forwards;
+}
+section.start-animation .newsbox1 .news-item:nth-child(2){
+    animation: Visibility 1s ease forwards;
+    animation-delay: .5s;
+}
+section.start-animation .newsbox1 .news-item:nth-child(3){
+    animation: Visibility 1s ease forwards;
+    animation-delay: 1s;
+}
+section.start-animation .newsbox2 .news-item:nth-child(1){
+    animation: Visibility 1s ease forwards;
+    animation-delay: 1.5s;
+}
+section.start-animation .newsbox2 .news-item:nth-child(2){
+    animation: Visibility 1s ease forwards;
+    animation-delay: 2s;
+}
+section.start-animation .newsbox2 .news-item:nth-child(3){
+    animation: Visibility 1s ease forwards;
+    animation-delay: 2.5s;
+}
+@keyframes Visibility {
+    0% {
+        opacity: 0;
+        scale: 0;
+    }
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
 }
 .news-item img {
     border-radius: 10px;
@@ -163,6 +282,13 @@ section {
 }
 .content {
     position: relative;
+    opacity: 0;
+}
+section.start-animation .content:nth-child(1) {
+    animation: LeftSlide 1s ease forwards;
+}
+section.start-animation .content:nth-child(2) {
+    animation: RightSlide 1s ease forwards;
 }
 .content img {
     height: 330px;
