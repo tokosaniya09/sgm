@@ -8,12 +8,17 @@ window.onscroll = () => {
     }
     section.forEach (sec =>{
         let top = window.scrollY;
-        let offset = sec.offsetTop - 150;
+        let offset = sec.offsetTop - 250;
         let height = sec.offsetHeight;
         if (top > offset && top < offset + height) {
             sec.classList.add('start-animation')
         } else {
             sec.classList.remove('start-animation')
+        }
+        if (top > sec.offsetTop - 200 && top < sec.offsetTop - 500 + height) {
+            sec.classList.add('start')
+        } else {
+            sec.classList.remove('start')
         }
     })
     var header = document.querySelector('.header');
