@@ -24,3 +24,13 @@ window.onscroll = () => {
     var header = document.querySelector('.header');
     header.classList.toggle("sticky",window.scrollY>100)
 }
+
+// popup
+
+let popup = document.querySelector("#popup");
+function openPopup() {
+    popup.classList.add("open-popup");
+}
+function closePopup() {
+    popup.classList.remove("open-popup");
+}

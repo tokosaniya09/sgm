@@ -21,9 +21,17 @@
             <a href="#photo">Photo Gallery</a>
             <a href="#family">Family</a>
         </nav>
-        <!-- <button class="btn2 btn">Download</button> -->
-        <button class="btn">Donate us</button>
+        <button class="btn" onclick="openPopup()">Donate us</button>
     </header>
+
+    <!-- qr -->
+    <div id="popup" class="qr">
+        <div class="cross" onclick="closePopup()">X</div>
+        <div class="qr_hedg">Scan the qr to donate</div>
+        <img src="images/qr.jpg" alt="">
+        <h6>NOTE: Min Donation Amount = RS 50/-, Max Donation Amount = RS 5000/-</h6>
+    </div>
+
     <!-- home-section -->
     <section id="home" class="home">
         <div class="title"> 
@@ -33,6 +41,7 @@
         </div>
         <img src="images/books.png" alt="">
     </section>
+
     <!-- about-section -->
     <section id="about" class="about">
         <div class="heading">About</div>
@@ -70,7 +79,7 @@
                 <img src="images/c1.jpg" alt="">
                 <div class="txt">
                     <h2 class="heading">Children's Day</h2>
-                    <h5>14 November</h5>
+                    <h5>Every year on 14 November</h5>
                     <b>“The children of today will make the India of tomorrow. The way we bring them up will determine the future of the country”</b>
                     <p>With this vision, we organize a memorable Children's Day where the bustling involvement of students in the spontaneous fun-filled games sparks off the day followed by a scintillating Open Dance Competition and a Talent Show where young dancers steal a chance to mesmerize the audience with their dynamics as they go across the floor.</p>
                 </div>
@@ -83,7 +92,7 @@
             <div class="event even">
                 <div class="txt">
                     <h2 class="heading">Teacher's Day</h2>
-                    <h5>5 September</h5>
+                    <h5>Every year on 5 September</h5>
                     <b>Celebrating the guiding lights who shape minds and inspire futures on Teacher's Day.</b>
                     <p>The teacher's day is a very special day for both students as well as teachers, to make this day memorable, we organize several competitions like drawing, dance, quiz and many more. Students participated enthusiastically, it was a sight to behold!</p>
                 </div>
@@ -98,7 +107,7 @@
                 <img src="images/a (7).jpg" alt="">
                 <div class="txt">
                     <h2 class="heading">Sunday Activity</h2>
-                    <h5>Every May / June</h5>
+                    <h5>Every Sunday</h5>
                     <b>Balancing learning and leisure, creating a harmonious 'playing time' for students to nurture both their academic and personal growth."</b>
                     <p>Students' overall development is critical for their overall growth and success in life. We aim to achieve this by conducting Sunday activities. Sunday event helps students participate in extracurricular activities like sports, music etc. and pursue Hobbies, interests, develop new skills, explore new areas of interest and relieve stress.</p>
                 </div>
@@ -111,7 +120,7 @@
             <div class="event even">
                 <div class="txt">
                     <h2 class="heading">Summer Camp</h2>
-                    <h5>Every Summer</h5>
+                    <h5>Every year in May/ June</h5>
                     <b>Embarking on a vibrant summer adventure, where learning meets fun in an enriching environment filled with exploration, friendship, and lifelong memories at the summer camp."</b>
                     <p>Students' overall development is critical for their overall growth and success in life. We aim to achieve this by conducting Sunday activities. Sunday event helps students participate in extracurricular activities like sports, music etc. and pursue Hobbies, interests, develop new skills, explore new areas of interest and relieve stress.</p>
                 </div>
@@ -126,7 +135,7 @@
                 <img src="images/a (16).jpg" alt="">
                 <div class="txt">
                     <h2 class="heading">Science Fair</h2>
-                    <h5>Every January</h5>
+                    <h5>Every year in January</h5>
                     <b>“Coming together is a beginning, staying together is progress, and working together is a success.”</b>
                     <p>To mark the importance of National Science day, the we conduct an eminent science modeling competition where our passionate talented buds display the models and projects made by them to the visitors. Our teachers help these young innovators in developing their ideas into great projects and give a push-up to their creative minds.
                     </p>
@@ -140,7 +149,7 @@
             <div class="event even">
                 <div class="txt">
                     <h2 class="heading">Foundation Day</h2>
-                    <h5>5 September</h5>
+                    <h5>Every year on 5 September</h5>
                     <b>"Marking the roots of our journey, Foundation Day is a celebration of growth, resilience, and the shared spirit that shapes our collective identity."</b>
                     <p>SGM was conceptualised in the 2010s with its sole purpose being to provide quality and free education to all. Since then, it has been an incredible journey of remarkable progress as well as significant learnings.Thus, to cherish these memories and to recollect the aim of this mission, we celebrate Founder's Day on 5th September every year.</p>
                 </div>
@@ -265,6 +274,8 @@
             </div>
         </div>
     </section>
+
+    <!-- footer -->
     <footer class="footer">
         <div class="item">
             <div class="social-media">
