@@ -83,7 +83,7 @@ section {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    /* background: linear-gradient(250.59deg, #322c38 0%, #514e61,28.53%,#1c2137 75.52%); */
+    background: linear-gradient(250.59deg, #322c38 0%, #514e61,28.53%,#1c2137 75.52%);
 }
 .home img{
     height: 500px;
@@ -279,13 +279,12 @@ section.start-animation .text-content2 p:nth-child(3){
 }
 .event img {
     height: 300px;
-    margin-right: 50px;
     border: black 5px solid;
     border-radius: 20px;
     box-shadow: 20px 20px 20px rgb(0, 0, 0);
 }
 .event .txt {
-    transform: translateY(20px);
+    transform: translateY(5px);
 }
 .event .txt .heading {
     margin-bottom: 30px;
@@ -298,8 +297,15 @@ section.start-animation .text-content2 p:nth-child(3){
     transform: translateX(1400px);
     transition: .1s;   
 }
+.events .odd img {
+    margin-right: 50px;
+}
+.events .even img {
+    margin-left: 50px;
+}
 .events .summer {
-    width: 500px;
+    width: 550px;
+    transform: translateY(30px);
 }
 section.start .events .odd{
     animation: Left 1.5s ease forwards;
@@ -327,6 +333,10 @@ section.start .events .even{
         opacity: 1;
     }
 }
+.events .t {
+    transform: translateY(-10px);
+}
+
 /* Proffesors */
 .proff .heading {
     transform: translateX(100px);
@@ -631,5 +641,5 @@ section.start-animation .video-content video{
 .open-popup {
     visibility: visible;
     top: 30%;
-    left: 35%;
+    right: 150px;
 }
